@@ -12,5 +12,17 @@ public class LAB01 {
         } catch (IOException e) {
             Logger.getLogger(LAB01.class.getName()).log(Level.SEVERE,null,e);
         }
+
+        try {
+            FileReader input = new FileReader("data.txt");
+            int ch;
+            while ((ch = input.read()) != -1){
+                System.out.println((char) ch);
+            }
+        } catch (FileNotFoundException e) {
+            Logger.getLogger(LAB01.class.getName()).log(Level.SEVERE,null,e);
+        } catch (IOException e) {
+            Logger.getLogger(LAB01.class.getName()).log(Level.SEVERE,null,e);
+        }
     }
 }
