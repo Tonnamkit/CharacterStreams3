@@ -20,6 +20,6 @@ public class LAB04 {
         } catch (FileNotFoundException e) {
             Logger.getLogger(LAB04.class.getName()).log(Level.SEVERE,null,e);
         }
-        //adsa
+
     }
 }

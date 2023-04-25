@@ -1,24 +1,20 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LAB05 {
     public static void main(String[] args) {
+        InputStreamReader in = new InputStreamReader(System.in);
+        BufferedReader input = new BufferedReader(in);
         try {
-            FileReader file = new FileReader("data.txt");
-            Scanner input = new Scanner(file);
-            String name = input.nextLine();
+            System.out.print("Entet text: ");
+            String name = input.readLine();
             System.out.println(name);
-            int age = input.nextInt();
+            System.out.print("Enter age: ");
+            String age = input.readLine();
             System.out.println(age);
-            double weight = input.nextDouble();
-            System.out.println(weight);
-            double height = input.nextDouble();
-            System.out.println(height);
-
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             Logger.getLogger(LAB05.class.getName()).log(Level.SEVERE,null,e);
         }
     }
